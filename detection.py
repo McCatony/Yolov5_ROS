@@ -75,7 +75,7 @@ class Yolov5Detector:
         self.pred_pub = rospy.Publisher('/object', String, queue_size=10) # Publish object type
         
         # (Optional)
-        self.bridge = CvBridge()
+        # self.bridge = CvBridge()
     
     def callback(self, img_msg):
         dtype = np.dtype("uint8")
@@ -112,9 +112,9 @@ class Yolov5Detector:
                     self.pred_pub.publish(detected_object)
         
         # (Optional) Observe what is captured
-        img_cv = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding="bgr8")
-        cv2.imshow(str(0), img_cv)
-        cv2.waitKey(1)
+        # img_cv = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding="bgr8")
+        # cv2.imshow(str(0), img_cv)
+        # cv2.waitKey(1)
     
     def preprocess(self, img):
         img_original = img.copy()
