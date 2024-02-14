@@ -1,1 +1,50 @@
-# Yolov5_ROS
+# Yolov5 Minimal Node for ROS-Noetic
+It's a revised version of https://github.com/mats-robotics/yolov5_ros
+It just publishes Object type by String type, so you can use string type in your control source code. 
+
+## Prerequisites
+Ubuntu 20.04, ROS-Noetic, Py-torch
+and I use Python 3.8
+
+## How to Set
+1. Create your ros workspace
+
+    $ mkdir -p your_ws/src
+    $ cd your_ws
+
+2. Create a package for Yolo
+
+    $ catkin_create_pkg yolov5_ros rospy roscpp std_msgs sensor_msgs message_generation
+
+3. Insert the below code at CMakeLists.txt 
+
+    ################################################
+    ## Declare ROS messages, services and actions ##
+    ################################################
+    # ...
+
+    add_message_files(
+     FILES
+    )
+
+    generate_messages(
+     DEPENDENCIES
+      geometry_msgs
+      sensor_msgs
+      std_msgs
+    )
+
+4. Install Yolov5 in your_ws/src/yolov5_ros/src
+5. Install this code in your_ws/src/yolov5_ros/src. Then yolov5 folder and detection.py will be in your_ws/src/yolov5_ros/src
+6. Execute $ catkin_make in your_ws, not anywhere
+7. Run
+
+## How to use
+1. Type 'roscore' in your first terminal
+2. Run or Launch any camera node in your second terminal
+3. Find your topic type. For example, '$ rostopic info /camera/color/image_raw'
+4. Revise detection.py for your image message type in line 74
+5. Run detection.py
+6. In your third terminal, you can find class name which is detcted by '% rostopic echo /object. And if you don't like node and topic name, then you can edit node and topic name in line 73 and 75
+7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros/src
+8. (Optional) If you want to see what is captured by camera, then disable comment in line 78, 115~117.
