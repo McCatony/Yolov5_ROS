@@ -11,17 +11,18 @@ and I use Python 3.8
 1. Create your ros workspace
 
     $ mkdir -p your_ws/src
+   
     $ cd your_ws
 
-2. Create a package for Yolo
+3. Create a package for Yolo
 
     $ catkin_create_pkg yolov5_ros rospy roscpp std_msgs sensor_msgs message_generation
 
-3. Exchange CMakeLists.txt from default one at your_ws/src to this one 
-4. Install Yolov5 in your_ws/src/yolov5_ros/src
-5. Install this code in your_ws/src/yolov5_ros/src. Then yolov5 folder and detection.py will be in your_ws/src/yolov5_ros/src
-6. Execute $ catkin_make in your_ws, not anywhere
-7. Run
+4. Exchange CMakeLists.txt from default one at your_ws/src to this one 
+5. Install Yolov5 in your_ws/src/yolov5_ros/src
+6. Install this code in your_ws/src/yolov5_ros/src. Then yolov5 folder and detection.py will be in your_ws/src/yolov5_ros/src
+7. Execute $ catkin_make in your_ws, not anywhere
+8. Run
 
 ## How to use
 0. Source ROS setup.bash
