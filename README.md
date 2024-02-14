@@ -16,7 +16,7 @@ and I use Python 3.8
 
     $ catkin_create_pkg yolov5_ros rospy roscpp std_msgs sensor_msgs message_generation
 
-3. Exchange CMakeLists.txt from default one to this one 
+3. Exchange CMakeLists.txt from default one at your_ws/src to this one 
 4. Install Yolov5 in your_ws/src/yolov5_ros/src
 5. Install this code in your_ws/src/yolov5_ros/src. Then yolov5 folder and detection.py will be in your_ws/src/yolov5_ros/src
 6. Execute $ catkin_make in your_ws, not anywhere
@@ -29,5 +29,5 @@ and I use Python 3.8
 4. Revise detection.py for your image message type in line 74
 5. Run detection.py
 6. In your third terminal, you can find class name which is detcted by '% rostopic echo /object. And if you don't like node and topic name, then you can edit node and topic name in line 73 and 75
-7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros/src
+7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros
 8. (Optional) If you want to see what is captured by camera, then disable comment in line 78, 115~117.
