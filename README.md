@@ -24,11 +24,12 @@ and I use Python 3.8
 7. Run
 
 ## How to use
-1. Type 'roscore' in your first terminal
+0. Source ROS setup.bash
+1. Run 'roscore' in your first terminal
 2. Run or Launch any camera node in your second terminal
 3. Find your topic type. For example, '$ rostopic info /camera/color/image_raw'
 4. Revise detection.py for your image message type in line 74
 5. Run detection.py
-6. In your third terminal, you can find class name which is detcted by '% rostopic echo /object. And if you don't like node and topic name, then you can edit node and topic name in line 73 and 75
-7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros. Also you can change confidence threshold at line 36
-8. (Optional) If you want to see what is captured by camera, then disable comment in line 78, 115~117.
+6. In your third terminal, you can find the class name which is detected by '% rostopic echo /object. And if you don't like node and topic name, then you can edit node and topic name in line 73 and 75
+7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros. Also, you can change confidence threshold at line 36
+8. (Optional) If you want to see what is captured by a camera, then disable the comment in line 78, 115~117.
