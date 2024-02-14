@@ -33,7 +33,7 @@ from utils.augmentations import letterbox
 
 class Yolov5Detector:
     def __init__(self):
-        self.conf_thres = rospy.get_param("~confidence_threshold", 0.3)
+        self.conf_thres = rospy.get_param("~confidence_threshold", 0.7)
         self.iou_thres = rospy.get_param("~iou_threshold", 0.45)
         self.agnostic_nms = rospy.get_param("~agnostic_nms", True)
         self.max_det = rospy.get_param("~maximum_detections", 1000)
