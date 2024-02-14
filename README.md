@@ -16,24 +16,7 @@ and I use Python 3.8
 
     $ catkin_create_pkg yolov5_ros rospy roscpp std_msgs sensor_msgs message_generation
 
-3. Insert the below code at CMakeLists.txt 
-
-    ################################################
-    ## Declare ROS messages, services and actions ##
-    ################################################
-    # ...
-
-    add_message_files(
-     FILES
-    )
-
-    generate_messages(
-     DEPENDENCIES
-      geometry_msgs
-      sensor_msgs
-      std_msgs
-    )
-
+3. Exchange CMakeLists.txt from default one to this one 
 4. Install Yolov5 in your_ws/src/yolov5_ros/src
 5. Install this code in your_ws/src/yolov5_ros/src. Then yolov5 folder and detection.py will be in your_ws/src/yolov5_ros/src
 6. Execute $ catkin_make in your_ws, not anywhere
