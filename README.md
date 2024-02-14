@@ -7,7 +7,7 @@ It just publishes Object type by String type, so you can use string type in your
 Ubuntu 20.04, ROS-Noetic, Py-torch
 and I use Python 3.8
 
-## How to Set
+## How to Install
 1. Create your ros workspace
 
     $ mkdir -p your_ws/src
@@ -24,7 +24,7 @@ and I use Python 3.8
 7. Execute $ catkin_make in your_ws, not anywhere
 8. Run
 
-## How to use
+## How to launch
 0. Source ROS setup.bash
 1. Run 'roscore' in your first terminal
 2. Run or Launch any camera node in your second terminal
