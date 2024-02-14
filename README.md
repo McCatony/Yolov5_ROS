@@ -30,5 +30,5 @@ and I use Python 3.8
 4. Revise detection.py for your image message type in line 74
 5. Run detection.py
 6. In your third terminal, you can find class name which is detcted by '% rostopic echo /object. And if you don't like node and topic name, then you can edit node and topic name in line 73 and 75
-7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros
+7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros. Also you can change confidence threshold at line 36
 8. (Optional) If you want to see what is captured by camera, then disable comment in line 78, 115~117.
