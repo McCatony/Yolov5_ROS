@@ -11,6 +11,7 @@ and I use Python 3.8
 1. Create your ros workspace
 
     $ mkdir -p <your_ws>/src
+    
     $ cd <your_ws>
     
     
