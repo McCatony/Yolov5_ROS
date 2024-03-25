@@ -9,9 +9,10 @@ and I use Python 3.8
 
 ## How to Install
 1. Create your ros workspace
-    
+
     $ mkdir -p <your_ws>/src
     $ cd <your_ws>
+    
     
 3. Create a package for Yolo
     
