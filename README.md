@@ -21,9 +21,10 @@ and I use Python 3.8
     
 4. Install this in <your_ws>/src. Then yolov5 folder and detection.py will be in your_ws/src/yolov5_ros/src
 5. Install Yolo_v5 in <your_ws>/src/yolov5_ros/src by https://github.com/ultralytics/yolov5.
+
    And do requirements in https://github.com/ultralytics/yolov5.
-7. Execute $ catkin_make in your_ws, not anywhere
-8. Run
+6. Execute $ catkin_make in your_ws, not anywhere
+7. Run
 
 ## How to launch
 0. Source ROS setup.bash
