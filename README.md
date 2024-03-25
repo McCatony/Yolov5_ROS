@@ -30,7 +30,10 @@ and I use Python 3.8
 
    And do requirements in https://github.com/ultralytics/yolov5.
 5. Execute $ catkin_make in your_ws, not anywhere
-6. Run
+6. Run by
+    ```
+    rosrun yolov5_ros detection.py
+    ```
 
 ## How to launch
 0. Source ROS setup.bash
