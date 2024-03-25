@@ -15,12 +15,22 @@ and I use Python 3.8
     cd <your_ws>
     ```
     
-2. Install this in <your_ws>/src. Then yolov5 folder and detection.py will be in <your_ws>/src/yolov5_ros/src
-3. Install Yolo_v5 in <your_ws>/src/yolov5_ros/src by https://github.com/ultralytics/yolov5.
+2. Install this in <your_ws>/src by
+    ```
+    git clone https://github.com/McCatony/yolov5_ros
+    ```
+
+    Then yolov5 folder and detection.py will be in <your_ws>/src/yolov5_ros/src
+3. Change file mode by
+    ```
+    chmod 777 detection.py
+    ```
+    
+4. Install Yolo_v5 in <your_ws>/src/yolov5_ros/src by https://github.com/ultralytics/yolov5.
 
    And do requirements in https://github.com/ultralytics/yolov5.
-4. Execute $ catkin_make in your_ws, not anywhere
-5. Run
+5. Execute $ catkin_make in your_ws, not anywhere
+6. Run
 
 ## How to launch
 0. Source ROS setup.bash
