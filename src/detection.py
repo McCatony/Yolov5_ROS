@@ -40,7 +40,7 @@ class Yolov5Detector:
         self.classes = rospy.get_param("~classes", None)
         
         # Initialize weights 
-        weights = rospy.get_param("~weights", "best.pt")
+        weights = rospy.get_param("~weights", "yolov5s.pt")
         
         # Initialize model
         self.device = select_device(str(rospy.get_param("~device","cpu")))
