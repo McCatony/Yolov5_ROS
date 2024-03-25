@@ -10,14 +10,14 @@ and I use Python 3.8
 ## How to Install
 1. Create your ros workspace
     ```
-    $ mkdir -p <your_ws>/src
+    mkdir -p <your_ws>/src
     
-    $ cd <your_ws>
+    cd <your_ws>
     ```
     
 3. Create a package for Yolo
     ```
-    $ catkin_create_pkg yolov5_ros rospy roscpp std_msgs sensor_msgs
+    catkin_create_pkg yolov5_ROS rospy roscpp std_msgs sensor_msgs
     ```
 4. Install this in <your_ws>/src. Then yolov5 folder and detection.py will be in your_ws/src/yolov5_ros/src
 5. Install Yolo_v5 in <your_ws>/src/yolov5_ros/src by https://github.com/ultralytics/yolov5.
@@ -32,13 +32,13 @@ and I use Python 3.8
 2. Run or Launch any camera node in your second terminal
 3. Find your topic type. For example,
     ```
-    $ rostopic info /camera/color/image_raw
+    rostopic info /camera/color/image_raw
     ```
 4. Revise detection.py for your image message type in line 74
 5. Run detection.py
 6. In your third terminal, you can find the class name which is detected by
     ```
-    % rostopic echo /object
+    rostopic echo /object
     ```
    And if you don't like node and topic name, then you can edit node and topic name in line 73 and 75
 7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros. Also, you can change confidence threshold at line 36
