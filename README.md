@@ -19,8 +19,8 @@ and I use Python 3.8
 3. Install Yolo_v5 in <your_ws>/src/yolov5_ros/src by https://github.com/ultralytics/yolov5.
 
    And do requirements in https://github.com/ultralytics/yolov5.
-6. Execute $ catkin_make in your_ws, not anywhere
-7. Run
+4. Execute $ catkin_make in your_ws, not anywhere
+5. Run
 
 ## How to launch
 0. Source ROS setup.bash
@@ -30,12 +30,14 @@ and I use Python 3.8
     ```
     rostopic info /camera/color/image_raw
     ```
+    
 4. Revise detection.py for your image message type in line 74
 5. Run detection.py
 6. In your third terminal, you can find the class name which is detected by
     ```
     rostopic echo /object
     ```
+    
    And if you don't like node and topic name, then you can edit node and topic name in line 73 and 75
 7. If you want to use your yolov5 weights, edit line 43 and pose your weights at your_ws/src/yolov5_ros. Also, you can change confidence threshold at line 36
 8. (Optional) If you want to see what is captured by a camera, disable the comment in line 78, 115~117. But, there will be no bounding boxes. 
