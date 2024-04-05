@@ -29,7 +29,7 @@ and I use Python 3.8
 4. Install Yolo_v5 in <your_ws>/src/yolov5_ros/src by https://github.com/ultralytics/yolov5.
 
    And do requirements in https://github.com/ultralytics/yolov5.
-5. Execute $ catkin_make in your_ws, not anywhere
+5. Execute $ catkin_make in your_ws, not anywhere. And source /devel/setup.bash
 6. At <your_ws>/src/yolov5_ros, Run detection node by
     ```
     rosrun yolov5_ros detection.py
